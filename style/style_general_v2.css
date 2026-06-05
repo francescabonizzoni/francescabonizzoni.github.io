@@ -1,1 +1,604 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* From this point: copyleft Matteo Tommasini */
+body {
+  font-family: 'Droid Serif', serif;
+  line-height: 28px;
+}
+
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+li {
+  line-height: 30px;
+}
+
+ul, ol {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+ul, ol {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 900px;
+  line-height: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 15px;
+}
+
+header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+ul {
+  -moz-padding-start: 20px;    /* firefox */
+  padding-left: 20px;
+}
+
+ol { 
+  padding: 0;
+  margin-left:20px;
+  text-indent:0;
+/*list-style-type:none;
+  list-style-image:none;*/
+}
+
+ol li {
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+/* This instruction targets the results of MathJax, hence objects that are not directly visible in the
+html source of the page. Do not remove it, even if it does not seem useful at first sight. */
+span {
+  font-size: 18px;
+}
+/* NOTE: for the moment we don't have additional spans in the html file.
+If we'll have spans, we'll need to target MathJax results in a more precise way! */
+
+body:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  margin:0;
+  color: #666;
+  font-size: 11.5pt;/*18px;*/
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  line-height: 1.42857143; /*28px;*/
+  color: #333333;
+}
+
+ol, ul {
+  /*list-style-type: none;*/
+  display: block;
+}
+
+.list-no-style {
+  list-style-type: none;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 140%;
+}
+
+a {
+  transition: text-shadow .3s;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: #2F67A8;
+}
+
+a:hover {
+  text-shadow: 0 0 .50px #2F67A8, 0 0 .05px #2F67A8;
+}
+
+/* overwrites the previous command in combination with JavaScript, only for Safari */
+.links-safari:hover {
+    text-shadow: 0.1em 0.1em rgb(47,103,168);
+}
+
+/* overwrites the previous lines for touch devices */
+a:focus {
+	text-shadow: 0 0 0 #fff;
+}
+
+/* upper menu */
+.menu {
+  z-index: 2;
+  overflow: auto;
+  text-align: center;
+  padding-bottom: 18px;
+  display: block;
+  direction: ltr;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  height: 86px;
+  border-bottom: 1px solid #2F67A8;
+  margin-bottom: 30px;
+}
+
+.menu a {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 8px 0 7px 0;
+  border: none;
+  outline: 0;
+  overflow: hidden;
+  text-decoration: none;
+  background-color:inherit;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 2px;
+  vertical-align: middle;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  position: relative;
+  -webkit-transition-duration: 0.5s; /* Safari */
+  transition-duration: 0.5s;
+}
+
+.menu a span {
+  font-size: 13px;
+}
+
+.menu a:hover {
+  border: 1px solid #5899AD;
+  font-weight: normal;
+}
+
+.menu a:active {
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+/* Bold font for the link in the menu corresponding to the current page */
+.menu a.current-page {
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.menu a.current-page:hover {
+  font-weight: bold;
+}
+
+.menu a.current-page:hover {
+  color: #2F67A8;
+  background-color: #fff;
+}
+
+.menu a:nth-of-type(1),
+.menu a:nth-of-type(4) {
+  min-width: 80px;
+  width: 27%;
+}
+.menu a:nth-of-type(2),
+.menu a:nth-of-type(5) {
+  min-width: 90px;
+    width: 27%;
+
+}
+.menu a:nth-of-type(3),
+.menu a:nth-of-type(6) {
+  min-width: 120px;
+  width: 28%;
+}
+
+/* in order to remove this effect, we insert a min-width so large that it will never be actually reached. */
+@media screen and (min-width: 10000px) {
+  .menu a span {
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    padding-right: 10px;
+  }
+
+  /* arrows: http://www.w3schools.com/charsets/ref_utf_arrows.asp */
+  /* math symbols: https://www.w3schools.com/charsets/ref_utf_math.asp */
+  .menu a span:after {
+    content: ' \00bb';
+    font-size: 15px;
+    /*position: absolute;*/
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .menu a.current-page span:after {
+    content: ' \21E9';
+  }
+
+  .menu a:hover span {
+    padding-left: 5px;
+    padding-right: 0;
+  }
+
+  .menu a:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .menu a:nth-of-type(1),
+  .menu a:nth-of-type(4) {
+    min-width: 90px;
+    width: 28%;
+  }
+  .menu a:nth-of-type(2),
+  .menu a:nth-of-type(5) {
+    min-width: 100px;
+    width: 28%;
+  }
+  .menu a:nth-of-type(3),
+  .menu a:nth-of-type(6) {
+    min-width: 135px;
+    width: 29%;
+  }
+}
+/* end of effect removed on basically every possible device */
+
+p {
+  line-height: 28px;
+}
+
+.empty-p {
+  height: 25px; 
+  width: 10px;
+}
+
+.myName {
+  font-size: 50px;
+  color: rgb(33, 103, 150);
+  text-align: center;
+  margin: 10px 5px 0 5px;
+}
+
+.myName h3 {
+  display: inline-block;
+  line-height: 60px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.myTitle h3 {
+  margin-bottom: 20px;
+  margin-top: 15px;
+  line-height: 45px;
+  font-family: 'Droid Serif', serif;
+  font-weight: normal;
+  font-size: 36px;
+  color: rgb(33, 103, 150);
+}
+
+.myTitle h4 {
+  font-size: 20px;
+}
+
+.myTitle h5 {
+  font-weight: bold;
+  font-style: italic;
+}
+
+#main-content div {
+  margin-top: 2px;
+}
+
+.unilogo {
+  width: 600px;
+}
+
+@media screen and (min-width: 600px) {
+  .unilogo {
+    width: 100%;
+  }
+}
+
+.qualification-work {
+  text-align: center; 
+  padding-bottom: 25px;
+  margin-top: 5px;
+}
+
+.contact-info {
+    display: inline-block; 
+    vertical-align: middle;
+  }
+#contact-info-1,
+#contact-info-2 {
+  width: 90%
+}
+#contact-info-2 p {
+  overflow-x: visible;
+}
+
+.overture {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 0;
+}
+
+.overture-inner {
+  display: block;
+  vertical-align: middle;
+}
+
+#overture-inner-1 {
+  width: 95%;
+  max-width: 350px; 
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+#overture-inner-2 {
+  text-align: center;
+  width: 100%;
+}
+
+.empty-p {
+  display: none;
+}
+
+#main-content {
+  margin: 0 10px 50px 10px;
+  text-align: left;
+}
+
+#home-content {
+  text-align: center;
+}
+
+#home-content ul {
+  list-style: none
+  }
+
+@media screen and (min-width: 525px) {
+  #contact-info-1 {
+    width: 39%;   
+    margin-right: 10px;
+  }
+
+  #contact-info-2 {
+    width: 55%;
+  }
+}
+
+.research-interests {
+  -moz-padding-start: 0 !important;    /* firefox */
+  padding-left: 0 !important;
+
+}
+
+@media screen and (min-width: 570px) {
+  .empty-p {
+    display: inline-block;
+  }
+}
+
+ul {
+  -webkit-padding-start: 20px;
+  list-style: disc;
+}
+
+ul li {
+    padding-left: 5px;
+}
+
+ol {
+  list-style: decimal;
+  -webkit-padding-start: 0px;
+}
+
+ol li {
+    padding-left: 5px;
+}
+
+@media screen and (min-width: 910px) {
+
+
+  .myName {
+    margin-top: 0;
+  }
+
+  #main-content {
+    margin: 0 0 50px 0;
+    text-align: left;
+  }
+
+  .overture-inner {
+    display: inline-block;
+  }
+
+  #overture-inner-1 {
+    width: 95%;
+    max-width: 330px;
+    margin-bottom: 5px;
+  }
+
+  #overture-inner-2 {
+    text-align: left;
+  }
+
+  .overture:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+
+  #overture-inner-1 {
+    width: 40%;
+  }
+  
+  #overture-inner-2 {
+    width: 60%;
+    margin-left: 20px;
+  }
+}
+
+#overture-inner-2 h3 div {
+  display: inline-block;
+}
+
+.overture-inner img {
+  width: 100%;
+}
+
+.introduction {
+  margin-bottom: 25px;
+}
+
+.paper_authors {
+  font-style: italic;
+}
+
+.paper_title {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.project-period {
+  display: block;
+  font-weight: bold;
+}
+.project_role {
+    font-style: italic;
+    display: inline;
+}
+
+.project_name {
+    font-style: italic;
+    display: inline;
+}
+
+.cv_period {
+    font-weight: bold;
+    display: block;
+}
+
+.cv_role {
+    font-style: italic;
+    display: inline;
+}
+
+.cv_education {
+    font-weight: bold;
+    display: inline;
+}
+
+.cv_title {
+    font-style: italic;
+    display: inline;
+}
+
+.cv_visits {
+    display: inline;
+    font-style: italic;
+}
+
+.cv_honor {
+    font-weight: bold;
+    display: inline;
+}
+
+.talks_conference {
+    display: inline;
+    font-style: italic;
+}
+
+header {
+      background-color: #102b52;
+      margin-top: 10px;
+    }
+    .unilogo {
+      width: 27% !important;
+      margin-left: 0;
+      display: block;
+      margin-left: auto;
+      margin-right: 20px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+    #home-content ul {
+      padding: 0;
+    }
 
