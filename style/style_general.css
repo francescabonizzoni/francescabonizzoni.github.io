@@ -584,3 +584,20 @@ ol li {
     display: inline;
     font-style: italic;
 }
+
+header {
+      background-color: #102b52;
+      margin-top: 10px;
+    }
+    .unilogo {
+      width: 27% !important;
+      margin-left: 0;
+      display: block;
+      margin-left: auto;
+      margin-right: 20px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+    #home-content ul {
+      padding: 0;
+    }
